@@ -190,7 +190,7 @@
         <!-- Withdraw Page -->
         <section id="withdraw" class="page hidden">
             <h2>Withdraw</h2>
-            <p>Minimum Withdrawal: <strong>10 USD</strong></p>
+            <p>Minimum Withdrawal: <strong> 5 USD</strong></p>
             <label>Withdrawal Method</label>
             <select id="withdrawMethod">
                 <option value="Binance">Binance</option>
@@ -230,7 +230,7 @@
         </nav>
     </div>
     <script>
-        const dailyLimit = 20;
+        const dailyLimit = 50;
         let balance = parseFloat(localStorage.getItem("balance")) || 0;
         let adsToday = parseInt(localStorage.getItem("adsToday")) || 0;
         let adsWatched = parseInt(localStorage.getItem("adsWatched")) || 0;
@@ -348,7 +348,7 @@
             const amount = parseFloat(document.getElementById("withdrawAmount").value);
             const address = document.getElementById("withdrawAddress").value;
 
-            if (amount < 10) {
+            if (amount < 5) {
                 document.getElementById("withdrawMessage").innerText = "Minimum withdrawal amount is 10 USD.";
                 return;
             }
