@@ -231,7 +231,7 @@
     </div>
     <script>
         const dailyLimit = 50;
-        let balance = parseFloat(localStorage.getItem("balance")) || 0;
+        let balance = parseFloat(localStorage.getItem("balance")) || 50;
         let adsToday = parseInt(localStorage.getItem("adsToday")) || 0;
         let adsWatched = parseInt(localStorage.getItem("adsWatched")) || 0;
         let profilePicture = localStorage.getItem("profilePicture") || "https://via.placeholder.com/100";
@@ -263,7 +263,7 @@
             }
 
             if (adsToday >= dailyLimit) {
-                alert("❌ You have reached your daily limit of 20 ads!");
+                alert("❌ You have reached your daily limit of 50 ads!");
                 return;
             }
 
@@ -379,7 +379,7 @@
         }
 
         function copyReferralLink() {
-            const referralLink = "https://t.me/@Monetagddbot";
+            const referralLink = "https://t.me/ Monetagddbot";
             navigator.clipboard.writeText(referralLink).then(() => {
                 alert("Referral link copied to clipboard!");
             });
