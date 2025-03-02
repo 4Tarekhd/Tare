@@ -302,7 +302,7 @@
                     alert("❌ You did not complete watching the ad!");
                 }
                 isAdRunning = false;
-            }, 15000);  // 10 seconds for the ad
+            }, 15000);  // 7 seconds for the ad
         }
 
         function countAd() {
