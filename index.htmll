@@ -217,7 +217,7 @@
             <p>Balance: <strong id="balance">$0</strong></p>
             <p>Total Tasks: <strong id="taskCount">0</strong></p>
             <p>Completed Tasks: <strong id="completedTasks">0</strong></p>
-            <p>Daily Ads: <strong id="dailyAds">0/20</strong></p>
+            <p>Daily Ads: <strong id="dailyAds">0/50</strong></p>
             <p>Referral Count: <strong id="referralCount">0</strong></p>
             <button class="earn-btn" onclick="copyReferralLink()">📋 Copy Link</button>
             <button class="option-btn" onclick="shareReferral()">📢 Share</button>
@@ -231,7 +231,7 @@
     </div>
     <script>
         const dailyLimit = 50;
-        let balance = parseFloat(localStorage.getItem("balance")) || 50;
+        let balance = parseFloat(localStorage.getItem("balance")) || 0;
         let adsToday = parseInt(localStorage.getItem("adsToday")) || 0;
         let adsWatched = parseInt(localStorage.getItem("adsWatched")) || 0;
         let profilePicture = localStorage.getItem("profilePicture") || "https://via.placeholder.com/100";
@@ -302,7 +302,7 @@
                     alert("❌ You did not complete watching the ad!");
                 }
                 isAdRunning = false;
-            }, 15000);  // 15 seconds for the ad
+            }, 15000);  // 10 seconds for the ad
         }
 
         function countAd() {
@@ -349,7 +349,7 @@
             const address = document.getElementById("withdrawAddress").value;
 
             if (amount < 5) {
-                document.getElementById("withdrawMessage").innerText = "Minimum withdrawal amount is 10 USD.";
+                document.getElementById("withdrawMessage").innerText = "Minimum withdrawal amount is 5 USD.";
                 return;
             }
 
